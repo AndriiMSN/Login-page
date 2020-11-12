@@ -1,0 +1,167 @@
+@import "./base/mixins";
+.discount {
+  background: $gray-secondary;
+  padding-top: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+  flex: 0 0 50%;
+
+  @media (max-width: 1035px) {
+    display: none;
+  }
+  button:focus {
+    outline: transparent;
+  }
+  &_block {
+    max-width: 513px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__images {
+      &__image {
+        width: fit-content;
+        background: #ffffff;
+        box-shadow: 10px 15px 20px rgba(211, 209, 216, 0.45);
+        position: absolute;
+        z-index: 20;
+
+        img {
+          filter: drop-shadow(1px 3px 16px rgba(69, 48, 33, 0.15));
+        }
+
+        &.top-1 {
+          top: 55px;
+          left: 0;
+          @include image_creative(6px);
+        }
+
+        &.top-2 {
+          top: 1px;
+          right: 21px;
+          @include image_creative(7px);
+        }
+
+        &.left-1 {
+          left: -54px;
+          top: 181px;
+
+          filter: blur(2px);
+          @include image_creative(5px);
+        }
+
+        &.bottom-1 {
+          left: 25px;
+          bottom: 18px;
+          @include image_creative(7px, 24px, 16px);
+        }
+
+        &.bottom-2 {
+          right: 137px;
+          bottom: 23px;
+          @include image_creative(5px, 16px, 12px);
+        }
+
+        &.bottom-3 {
+          right: -51px;
+          bottom: 71px;
+          @include image_creative(8px, 32px, 24px);
+        }
+      }
+    }
+
+    &__creative {
+      width: 408px;
+      height: 408px;
+      position: relative;
+      border-radius: 50%;
+      border: 1px solid rgba(239, 125, 0, 0.2);
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__ellipse {
+        width: 350px;
+        border-radius: 50%;
+        background: #ef7d00;
+        position: relative;
+        padding: 0 32px 71px 0;
+        background: radial-gradient(
+          circle closest-side,
+          #ef7d00 85%,
+          transparent 86%
+        );
+        -webkit-mask: radial-gradient(
+            circle closest-side,
+            #ef7d00 85%,
+            transparent 86%
+          ),
+          linear-gradient(#fff, #fff) top/100% 70% no-repeat;
+
+        img {
+          display: block;
+          width: 96%;
+        }
+      }
+    }
+
+    &__today {
+      margin-top: 40px;
+      max-width: 336px;
+      width: 100%;
+      h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      p {
+        color: $gray;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        margin-bottom: 23px;
+      }
+
+      &__button_next {
+        @include button_circle(
+          57px,
+          57px,
+          2px,
+          2px solid,
+          $orange #d8d9d9 #d8d9d9 #d8d9d9,
+          linear-gradient(to bottom, $orange, $orange)
+        );
+        position: relative;
+      }
+    }
+    &__chat {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+
+      &__button {
+        @include button_circle(
+          90px,
+          90px,
+          6px,
+          1px solid,
+          #d8d9d99f,
+          linear-gradient(to bottom, $black, $black)
+        );
+        position: relative;
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="container-fluid row">
+        <div class="login">
+          <div class="login_block">
+            <div class="login_block__logo">
+              <img src="./img/logo.png" alt="" />
+            </div>
+            <!-- /.login_block__logo -->
+            <form action="" class="login_block__form">
+              <h2>Войти</h2>
+              <ul class="login_block__form__tabs">
+                <li class="login_block__form__tabs__email col-md-6 active">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9394 0C16.2804 0 17.5704 0.53 18.5194 1.481C19.4694 2.43 20.0004 3.71 20.0004 5.05V12.95C20.0004 15.74 17.7304 18 14.9394 18H5.0604C2.2694 18 0.000396729 15.74 0.000396729 12.95V5.05C0.000396729 2.26 2.2594 0 5.0604 0H14.9394ZM16.5304 6.54L16.6104 6.46C16.8494 6.17 16.8494 5.75 16.5994 5.46C16.4604 5.311 16.2694 5.22 16.0704 5.2C15.8604 5.189 15.6604 5.26 15.5094 5.4L11.0004 9C10.4204 9.481 9.5894 9.481 9.0004 9L4.5004 5.4C4.1894 5.17 3.7594 5.2 3.5004 5.47C3.2304 5.74 3.2004 6.17 3.4294 6.47L3.5604 6.6L8.1104 10.15C8.6704 10.59 9.3494 10.83 10.0604 10.83C10.7694 10.83 11.4604 10.59 12.0194 10.15L16.5304 6.54Z"
+                    />
+                  </svg>
+                  <p>Эл. почта</p>
+                </li>
+                <li class="login_block__form__tabs__phone col-md-6">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.459 13.2247C16.9593 12.7135 14.797 10.9945 14.2604 10.882C13.6635 10.756 13.1909 11.0305 12.7732 11.2708C12.3438 11.5183 11.9738 11.7325 11.5074 11.5633C9.11728 10.5877 7.41041 8.88135 6.43814 6.50089C6.2662 6.02749 6.47956 5.6558 6.72712 5.22651C6.96749 4.80981 7.23847 4.33642 7.11513 3.73973C7.0035 3.20334 5.28493 1.04157 4.77269 0.542082C4.43419 0.212687 4.0885 0.0308899 3.7347 0.00119041C2.39963 -0.0546087 0.750376 1.86776 0.488403 2.28985C-0.166977 3.19254 -0.162476 4.39042 0.500107 5.8448C2.09535 9.75073 8.19363 15.849 12.1457 17.4924C12.874 17.8308 13.5411 18 14.1398 18C14.7267 18 15.248 17.8371 15.6963 17.5149C16.0339 17.3223 18.0477 15.6141 17.9991 14.2543C17.9703 13.9069 17.7885 13.5613 17.459 13.2247Z"
+                    />
+                  </svg>
+                  <p>Телефон</p>
+                </li>
+              </ul>
+              <label for="user_email">
+                <p>Эл. почта</p>
+              </label>
+              <input
+                type="email"
+                name="user_email"
+                id="user_email"
+                placeholder="Ваша электронная почта"
+                class="changed_input"
+              />
+              <span class="changed_input_error"></span>
+              <label for="user_password">
+                <p>Пароль</p>
+                <p class="text-orange">Забыли пароль?</p>
+              </label>
+              <div class="login_block__form__password">
+                <input
+                  type="password"
+                  name="user_password"
+                  id="user_password"
+                  placeholder="Пароль"
+                />
+                <div>
+                  <img src="./img/show-pass.png" alt="" />
+                </div>
+              </div>
+
+              <hr />
+              <button type="submit">Войти</button>
+            </form>
+            <!-- /.form -->
+            <div class="login_block__enter-with">
+              <hr />
+              <p>Или войдите через</p>
+              <div class="login_block__enter-with__buttons">
+                <button class="facebook">Facebook</button>
+                <button class="google">Google</button>
+              </div>
+              <!-- /.login_block__enter-with__buttons -->
+            </div>
+            <!-- /.login_block__enter-with -->
+            <div class="login_block__register text-center">
+              <p>
+                У вас еще нет аккаунта?
+                <span class="text-orange">Зарегистрируйтесь</span>
+              </p>
+            </div>
+            <!-- /.login_block__register -->
+          </div>
+          <!-- /.login_block -->
+        </div>
+        <!-- /.login.col-md-6 -->
+        <div class="discount">
+          <div class="discount_block">
+            <div class="discount_block__creative">
+              <div class="discount_block__images">
+                <div class="discount_block__images__image top-1">
+                  <img src="./img/modern-room-top-1.png" alt="" />
+                </div>
+                <!-- /.discount_block__images__image -->
+                <div class="discount_block__images__image top-2">
+                  <img src="./img/modern-room-top-2.png" alt="" />
+                </div>
+                <!-- /.discount_block__images__image -->
+                <div class="discount_block__images__image left-1">
+                  <img src="./img/modern-room-left-1.png" alt="" />
+                </div>
+                <!-- /.discount_block__images__image -->
+                <div class="discount_block__images__image bottom-1">
+                  <img src="./img/modern-room-bottom-1.png" alt="" />
+                </div>
+                <!-- /.discount_block__images__image -->
+                <div class="discount_block__images__image bottom-2">
+                  <img src="./img/modern-room-bottom-2.png" alt="" />
+                </div>
+                <!-- /.discount_block__images__image -->
+                <div class="discount_block__images__image bottom-3">
+                  <img src="./img/modern-room-bottom-3.png" alt="" />
+                </div>
+                <!-- /.discount_block__images__image -->
+              </div>
+              <!-- /.discount_block__images -->
+              <div class="discount_block__creative__ellipse">
+                <img src="./img/creative_girl.png" alt="" />
+
+                <div
+                  class="discount_block__creative__ellipse__background"
+                ></div>
+                <!-- /.discount_block__creative__ellipse__background -->
+              </div>
+              <!-- /.discount_block__creative__ellipse -->
+            </div>
+            <!-- /.discount_block__creative -->
+            <div class="discount_block__today text-center">
+              <h3>Сегодняшние скидки</h3>
+              <p>
+                Скидки до 30% с эксклюзивными предложениями UneedHostels! Цены
+                снизятся, как только вы войдете в аккаунт!
+              </p>
+              <button class="discount_block__today__button_next">
+                <div class="discount_block__today__button_next__inner">
+                  <svg
+                    width="18"
+                    height="12"
+                    viewBox="0 0 18 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.14147 0.603844C8.90748 0.730082 8.7616 0.970126 8.7616 1.23121V5.29666H0.734294C0.328964 5.29666 0 5.61799 0 6.01392C0 6.40985 0.328964 6.73118 0.734294 6.73118H8.7616V10.7966C8.7616 11.0587 8.90748 11.2987 9.14147 11.424C9.37547 11.5512 9.66135 11.5426 9.88752 11.4039L17.6573 6.6212C17.8708 6.48923 18 6.26066 18 6.01392C18 5.76718 17.8708 5.53861 17.6573 5.40664L9.88752 0.623927C9.76807 0.551244 9.63198 0.513947 9.49589 0.513947C9.37449 0.513947 9.25211 0.54455 9.14147 0.603844Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <!-- /.discount_block__creative -->
+          </div>
+          <!-- /.discount_block -->
+          <div class="discount_block__chat">
+            <button class="discount_block__chat__button">
+              <div class="discount_block__chat__button__inner">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 9.01352C0 4.27241 3.789 0 9.018 0C14.13 0 18 4.19129 18 8.98648C18 14.5478 13.464 18 9 18C7.524 18 5.886 17.6034 4.572 16.8282C4.113 16.5488 3.726 16.3415 3.231 16.5038L1.413 17.0446C0.954 17.1888 0.54 16.8282 0.675 16.3415L1.278 14.3225C1.377 14.0431 1.359 13.7456 1.215 13.5113C0.441 12.0871 0 10.5278 0 9.01352ZM7.82996 9.01346C7.82996 9.65342 8.34296 10.1672 8.98196 10.1762C9.62096 10.1762 10.134 9.65342 10.134 9.02247C10.134 8.38251 9.62096 7.86874 8.98196 7.86874C8.35196 7.85973 7.82996 8.38251 7.82996 9.01346ZM11.9789 9.02255C11.9789 9.6535 12.4919 10.1763 13.1309 10.1763C13.7699 10.1763 14.2829 9.6535 14.2829 9.02255C14.2829 8.38259 13.7699 7.86882 13.1309 7.86882C12.4919 7.86882 11.9789 8.38259 11.9789 9.02255ZM4.83308 10.1763C4.20308 10.1763 3.68108 9.65353 3.68108 9.02258C3.68108 8.38262 4.19408 7.86885 4.83308 7.86885C5.47208 7.86885 5.98508 8.38262 5.98508 9.02258C5.98508 9.65353 5.47208 10.1673 4.83308 10.1763Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <!-- /.discount_block__chat -->
+        </div>
+        <!-- /.discount.col-md-6 -->
+      </div>
+      <!-- /.container -->
+    </main>
+
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

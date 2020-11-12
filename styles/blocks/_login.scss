@@ -1,0 +1,206 @@
+@import "./base/mixins";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 50%;
+  @media (max-width: 1035px) {
+    flex: 0 0 100%;
+  }
+  @media (max-width: 475px) {
+    padding: 0 15px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &_block {
+    padding: 40px 0px;
+    width: 100%;
+    max-width: 424px;
+
+    &__logo {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 67px;
+
+      img {
+        max-width: 119px;
+        width: 119px;
+        max-height: 42px;
+        height: 42px;
+        object-fit: contain;
+      }
+    }
+
+    &__form {
+      h2 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 32px;
+        text-align: left;
+        @media (max-width: 768.98px) {
+          text-align: center;
+        }
+      }
+
+      &__tabs {
+        width: 100%;
+        display: flex;
+        list-style: none;
+
+        li {
+          border-bottom: 2px solid $gray-secondary;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          padding-bottom: 16px;
+          margin-top: 26px;
+
+          svg {
+            fill: #abadb4;
+            margin-right: 8px;
+          }
+
+          &.active {
+            border-bottom: 2px solid $black;
+
+            svg {
+              fill: #393b3c;
+            }
+          }
+        }
+      }
+      .changed_input_error {
+        color: $red;
+        margin: 5px 0 10px;
+        display: block;
+      }
+      label {
+        margin-top: 16px;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      input[type="email"],
+      input[type="text"],
+      input[type="password"],
+      input[type="tel"] {
+        @include form_item($gray-secondary);
+        &::placeholder {
+          color: $gray;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 20px;
+          height: 24px;
+        }
+        &.valid {
+          border: 1px solid green;
+        }
+        &.error {
+          border: 1px solid $red;
+        }
+      }
+
+      &__password {
+        position: relative;
+
+        div {
+          background: transparent;
+          outline: transparent;
+          position: absolute;
+          border: none;
+          width: fit-content;
+          height: fit-content;
+          top: 50%;
+          right: 32px;
+          transform: translateY(-50%);
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          &.hide {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      button[type="submit"] {
+        @include form_item($black);
+        color: white;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    &__enter-with {
+      margin-top: 43px;
+      position: relative;
+
+      hr {
+        margin-bottom: 0;
+      }
+
+      p {
+        color: $gray;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: fit-content;
+        padding: 0 15px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: white;
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 28px;
+
+        button {
+          max-width: 204px;
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .facebook {
+          @include form_item($blue, 50%, 56px);
+        }
+
+        .google {
+          @include form_item($red, 50%, 56px);
+        }
+      }
+    }
+
+    &__register {
+      margin-top: 32px;
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}

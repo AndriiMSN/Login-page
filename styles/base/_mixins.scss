@@ -1,0 +1,53 @@
+// Form inputs
+@mixin form_item($background, $width: 100%, $height: 64px) {
+  background: $background;
+  border-radius: 32px;
+  outline: transparent;
+  border: none;
+  padding: 22px 32px;
+  width: $width;
+  max-height: $height;
+}
+
+// Images around girl
+@mixin image_creative(
+  $padding,
+  $border-radius-block: 16px,
+  $border-radius-image: 10px
+) {
+  padding: $padding;
+  border-radius: $border-radius-block;
+
+  img {
+    border-radius: $border-radius-image;
+  }
+}
+
+// Button Circle
+@mixin button_circle(
+  $width,
+  $height,
+  $padding,
+  $border,
+  $border-color,
+  $inner-background
+) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  background: transparent;
+  padding: $padding;
+  border: $border;
+  border-color: $border-color;
+  transform: rotate(45deg);
+  &__inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    background-image: $inner-background;
+  }
+}
